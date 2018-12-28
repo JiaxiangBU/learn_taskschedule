@@ -2,3 +2,4 @@
 
 1. add r proj and readme and news
 1. add issue list
+1. markup issue list
