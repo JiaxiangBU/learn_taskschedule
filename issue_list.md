@@ -18,6 +18,18 @@ Issue](https://github.com/bnosac/taskscheduleR/issues/44)，加入`schtasks_extr
 system("control schedtasks")
 ```
 
+``` r
+knitr::include_graphics("figure/logging_status_job.png")
+```
+
+![](figure/logging_status_job.png)<!-- -->
+
+``` r
+knitr::include_graphics("figure/logging_status_job2.png")
+```
+
+![](figure/logging_status_job2.png)<!-- -->
+
 # 高频查看更新
 
 HUE在每分钟查看记录时，会延迟，不展示最新记录，因此建议使用RODBC包函数查询，进行测试。
@@ -29,3 +41,18 @@ from opd.t181228_schedule_task_test_ljx
 order by inserttime desc
          ")
 ```
+
+# R跑脚本的CMD命令
+
+参考 [Stack
+Overflow](https://stackoverflow.com/questions/18306362/run-r-script-from-command-line)
+\> If you want the output to print to the terminal it is best to use
+Rscript
+
+``` shell
+$ Rscript test.R
+[1] 1
+```
+
+    R CMD BATCH test.R
+    cat test.Rout
