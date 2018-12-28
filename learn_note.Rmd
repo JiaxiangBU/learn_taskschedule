@@ -1,0 +1,38 @@
+```{r eval=F}
+insert into opd.t181228_schedule_task_test_ljx
+select 
+    1 as x1
+    ,'测试中文' as chi
+    ,'测试正则化' as repex
+    ,current_timestamp() as inserttime
+    
+ALTER TABLE opd.t181228_schedule_task_test_ljx ADD COLUMNS (chi string, repex string)
+
+select *
+from opd.t181228_schedule_task_test_ljx
+```
+
+```{r}
+library(taskscheduleR)
+test_task_path <- file.path(getwd(),"test.R")
+taskscheduler_create(taskname = "test_task", rscript = test_task_path, 
+                 schedule = "MINUTE", starttime = "12:51", startdate = format(Sys.Date(), "%Y/%m/%d")
+                 # ,schtasks_extra = '/RU CORP\\lijiaxiang /RP  ******'
+                 )
+```
+
+
+```{r eval=F}
+taskscheduler_delete("test_task")
+```
+
+```{r}
+library(RODBC)
+impala <- odbcConnect("Impala")
+sqlQuery(impala,"
+select *
+from opd.t181228_schedule_task_test_ljx
+order by inserttime desc
+         ")
+```
+
