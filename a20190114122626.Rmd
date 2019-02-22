@@ -5,3 +5,5 @@ output: github_document
 执行 code 存入 `.R`
 新建另一个`.R`，用`source`打开第一个`.R`，标注好 encoding
 然后 用 `R CMD BATCH` 就可以执行了。
+
+但是我发现 Run Job 的 Encoding 问题解决了。

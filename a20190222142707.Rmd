@@ -1,0 +1,18 @@
+---
+output: github_document
+---
+
+所有的路径
+
+```
+C:\ProgramData\Miniconda3;C:\ProgramData\Miniconda3\Library\mingw-w64\bin;C:\ProgramData\Miniconda3\Library\usr\bin;C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%systemroot%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;D:\install\;C:\Program Files (x86)\Java\jre1.8.0_191;C:\Program Files\R\R-3.5.1\bin;C:\ProgramData\Miniconda3\Scripts;C:\ProgramData\Miniconda3\;D:\install\hadoop-0.20.2-cdh3u4\bin;D:\install\aria2-1.34.0-win-64bit-build1;C:\Program Files\R\R-3.5.2\bin\x64
+```
+
+win 自动跑job 有图文了
+https://mp.weixin.qq.com/s/O1Lkfql058avzBCqL_Wdsw
+
+设置了，bat 前都可以，就是在进行 win 7 任务设置时，没有成功，手动点击运行也不能运行。
+
+修改了最高权限。
+
+也没用。

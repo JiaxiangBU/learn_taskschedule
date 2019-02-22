@@ -9,5 +9,3 @@ select
     ,current_timestamp() as inserttime
 
          ")
-
-g
